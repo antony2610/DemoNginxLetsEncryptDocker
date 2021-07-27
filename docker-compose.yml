@@ -2,13 +2,19 @@ version: '3.4'
 
 services:
   demoweb:
-    image: ${DOCKER_REGISTRY-}demonginxletsencryptdocker
+    image: demo3container.azurecr.io/demonginxletsencryptdocker:latest
     build:
       context: .
       dockerfile: DemoNginxLetsEncryptDocker/Dockerfile
 
-  nginx-proxy:
-    image: jwilder/nginx-proxy:alpine
+  #nginx-proxy:
+  #  image: jwilder/nginx-proxy:alpine
 
-  letsencrypt:
-    image: jrcs/letsencrypt-nginx-proxy-companion
+  #letsencrypt:
+  #  image: jrcs/letsencrypt-nginx-proxy-companion
+  demoapi:
+    image: demo3container.azurecr.io/demonginxletsencryptdockerapi:latest
+    build:
+      context: .
+      dockerfile: DemoNginxLetsEncryptDocker.API/Dockerfile
+

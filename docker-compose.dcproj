@@ -6,7 +6,7 @@
     <ProjectGuid>c7856c80-4f3f-439f-8338-6f6bfd6a1efa</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>demonginxletsencryptdocker</DockerServiceName>
+    <DockerServiceName>demoweb</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
