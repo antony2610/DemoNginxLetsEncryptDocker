@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  demoweb:
+    image: ${DOCKER_REGISTRY-}demonginxletsencryptdocker
+    build:
+      context: .
+      dockerfile: DemoNginxLetsEncryptDocker/Dockerfile
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy:alpine
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
